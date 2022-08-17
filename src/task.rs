@@ -28,7 +28,7 @@ impl Task {
             Status::NotStarted => {
                 self.status = Status::InProgress;
                 format!("Starting task {}", self.id)
-            },
+            }
         }
     }
 
@@ -38,7 +38,7 @@ impl Task {
             Status::InProgress => {
                 self.status = Status::Done;
                 format!("Finished task {}", self.id)
-            },
+            }
             Status::NotStarted => String::from("Task not started"),
         }
     }

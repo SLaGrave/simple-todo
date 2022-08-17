@@ -31,7 +31,7 @@ fn main() -> io::Result<()> {
                 io::stdin().read_line(&mut buffer)?;
                 buffer.pop();
                 v.push(task::Task::new(v.len(), buffer));
-            },
+            }
             "s" => {
                 // Start a task
                 println!("Please input the task to start's id:");
@@ -40,7 +40,7 @@ fn main() -> io::Result<()> {
                 buffer.pop();
                 let tmp = v[buffer.parse::<usize>().unwrap()].start();
                 println!("{}", tmp);
-            },
+            }
             "f" => {
                 // Start a task
                 println!("Please input the finished task's id:");
@@ -49,11 +49,11 @@ fn main() -> io::Result<()> {
                 buffer.pop();
                 let tmp = v[buffer.parse::<usize>().unwrap()].finish();
                 println!("{}", tmp);
-            },
+            }
             "q" => break,
             _ => {
                 println!("Unknown Command");
-            },
+            }
         }
     }
     Ok(())
